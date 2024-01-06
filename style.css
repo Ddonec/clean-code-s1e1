@@ -85,7 +85,9 @@
 .input[type="text"]:focus {
   color: #333;
 }
-
+.none {
+    display: none;
+}
 /* New Task */
 .label[for="new-task"] {
   display: block;
