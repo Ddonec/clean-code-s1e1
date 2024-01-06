@@ -39,10 +39,12 @@
   margin: 0;
   padding: 0px;
 }
-.item,.title {
+.item,
+.title {
   list-style: none;
 }
-.input,.button{
+.input,
+.button {
   outline: none;
 }
 .button {
@@ -58,7 +60,8 @@
   color: #3a3a3a;
 }
 /* Heading */
-.title,.label[for="new-task"] {
+.title,
+.label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
