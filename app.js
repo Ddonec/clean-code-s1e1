@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelector(".task-wrapper__button");//first button (button with class name task-wrapper__button)
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
@@ -43,9 +43,9 @@ var createNewTaskElement=function(taskString){
   editInput.className="page__main_task page__main_input";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit button";
+  editButton.className="list__edit-btn button";
 
-  deleteButton.className="delete button";
+  deleteButton.className="list__item_delete button";
   deleteButtonImg.src="./remove.svg";
   deleteButtonImg.className = "button__delete-image"
   deleteButton.appendChild(deleteButtonImg);
@@ -87,7 +87,7 @@ var editTask=function(){
 
   var editInput=listItem.querySelector("input[type=text]");
   var label=listItem.querySelector(".page__main_label");
-  var editBtn=listItem.querySelector(".edit");
+  var editBtn=listItem.querySelector(".list__edit-btn");
   var containsClass=listItem.classList.contains("list__edit-mode");
     //If class of the parent is .edit-mode
   if(containsClass){
@@ -159,8 +159,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
 //select ListItems children
   var checkBox=taskListItem.querySelector("input[type=checkbox]");
-  var editButton=taskListItem.querySelector("button.edit");
-  var deleteButton=taskListItem.querySelector("button.delete");
+  var editButton=taskListItem.querySelector("button.list__edit-btn");
+  var deleteButton=taskListItem.querySelector("button.list__item_delete");
 
 
     //Bind editTask to edit button.
