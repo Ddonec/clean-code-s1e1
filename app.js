@@ -135,7 +135,7 @@ var taskIncomplete=function(){
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
-
+}
 
 
 
